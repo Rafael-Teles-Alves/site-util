@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: arial;
+}
+body{
+    background-color: #ECECEC;
+}
+nav ul{
+    list-style: none;
+    background-color: black;
+    height: 35px;
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a {
+    color:rgb(255, 255, 255);
+    padding:0px 25px;
+    margin:8px;
+    display: inline-block;
+}
+.titulo{
+    margin-top: 3%;
+    top: 10%;
+    text-align: center;
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 2px 10px;
+}
+h1{
+    margin: 2px 20px;
+    padding: 2px 25px;
+    display: block;
+}
+p{
+    position: relative;
+    margin: 10px;
+}
+header{
+    background: wheat;
+    padding: 5px 20px;
+    text-align: center;
+    margin: 5px 200px 5px;
+
+}
+.h1-header{
+    font-family: 'Courier New', Courier, monospace;
+}
+.logo{
+    width: 50px;
+    height: auto;
+    left: 5%;
+    align-items: center;
+    border-radius: 45px;
+    position: absolute;
+}
+/*
+animação css
+*/
+.typewriter h1 {
+    overflow: hidden; /* Garante que o texto não seja visível antes da animação começar */
+    border-right: .15em solid orange; /* Cria o efeito de cursor intermitente */
+    white-space: nowrap; /* Evita que o texto seja quebrado em várias linhas */
+    margin: 0 auto; /* Centraliza o elemento na página */
+    letter-spacing: .15em; /* Define o espaçamento entre as letras */
+    animation: typing 5s steps(50) infinite;
+}  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 24% }
+}
+.typewriter h1 a {
+    text-decoration: none;
+    color: #2ecc71;
+    background: #333;
+    padding: 2px 8px;
+}
+/* fim da animação */
+.galeria{
+    width: 300px;
+    height: 475px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 15px #ccc;
+}
+.coding {
+    padding: 20px;
+    color: #333;
+}
+.coding .nome-coding {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.coding .descrição-coding {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.coding .bnt-ver {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    margin: 0px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.coding .bnt-baixar {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.bnt-baixar{
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.bnt-baixar:hover {
+	background-color: #555;
+}
+.bnt-ver:hover {
+	background-color: #555;
+}
+.vide-controls{
+    width: 300px;
+    height: auto;
+}

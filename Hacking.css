@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: arial;
+}
+body{
+    background-color: #ECECEC;
+}
+nav ul{
+    list-style: none;
+    background-color: black;
+    height: 35px;
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a {
+    color:rgb(255, 255, 255);
+    padding:0px 25px;
+    margin:8px;
+    display: inline-block;
+}
+.titulo{
+    margin-top: 3%;
+    top: 10%;
+    text-align: center;
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 2px 10px;
+}
+h1{
+    margin: 2px 20px;
+    padding: 2px 25px;
+    display: block;
+}
+p{
+    position: relative;
+    margin: 10px;
+}
+header{
+    background: wheat;
+    padding: 5px 20px;
+    text-align: center;
+    margin: 5px 200px 5px;
+}
+.h1-header{
+    font-family: 'Courier New', Courier, monospace;
+}
+.logo{
+    width: 50px;
+    height: auto;
+    left: 5%;
+    align-items: center;
+    border-radius: 45px;
+    position: absolute;
+}
+.titulo_hecking{
+    text-align: center;
+    margin: 15px 0px 25px;
+    padding: 15px;
+}
+.div-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    border: 2px solid rgb(250, 201, 201);
+    width: 255px;
+    height: 105px;
+    margin: 15px 25px 45px 25px;
+    box-shadow: 5px 5px 5px 5px red;
+}.div-galeria:hover{
+    box-shadow: 5px 5px 5px 5px blue;
+}
+.titulo-div{
+    color: black;
+    font-family: arial;
+}
+.tex-div{
+    text-align: start;
+    font-size: 15px;
+    font-family: arial;
+}

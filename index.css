@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+body{
+    background-color: #ECECEC;
+}
+nav ul{
+    list-style: none;
+    background-color: black;
+    height: 35px;
+    
+}
+nav ul li{
+    display: inline;
+    
+    
+}
+nav ul li a {
+    color:rgb(255, 255, 255);
+    padding:0px 25px;
+    margin:8px;
+    display: inline-block;
+}
+.logo{
+    width: 50px;
+    height: auto;
+    left: 5%;
+    align-items: center;
+    border-radius: 45px;
+    position: absolute;
+}
+h1{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%,-50%)
+}
+span{
+    color: red;
+}
+p{
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    right: 58%;
+    padding: 0px 25px;
+}
+i{
+    color: black;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+}
+img{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
