@@ -64,7 +64,7 @@ header{
     border-radius: 45px;
     position: absolute;
 }
-.galeria{
+.galeria {
     margin: 35px 45px;
     width: 250px;
     height: auto;
@@ -95,7 +95,6 @@ header{
     border-radius: 5px;
     cursor: pointer;
 }
-
 .bnt-baixar:hover {
 	background-color: #555;
 }

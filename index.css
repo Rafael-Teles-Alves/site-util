@@ -10,12 +10,9 @@ nav ul{
     list-style: none;
     background-color: black;
     height: 35px;
-    
 }
 nav ul li{
     display: inline;
-    
-    
 }
 nav ul li a {
     color:rgb(255, 255, 255);
@@ -57,4 +54,8 @@ img{
     position: absolute;
     top: 10%;
     left: 50%;
+}
+footer{
+    position: relative;
+    top:650px;
 }
