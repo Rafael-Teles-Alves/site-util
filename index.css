@@ -10,6 +10,7 @@ nav ul{
     list-style: none;
     background-color: black;
     height: 35px;
+    
 }
 nav ul li{
     display: inline;
@@ -26,7 +27,7 @@ nav ul li a {
     left: 5%;
     align-items: center;
     border-radius: 45px;
-    position: absolute;
+    position: relative;
 }
 h1{
     position: absolute;
@@ -43,6 +44,7 @@ p{
     text-align: center;
     top: 55%;
     right: 58%;
+    width: 450px;
     padding: 0px 25px;
 }
 i{
@@ -50,12 +52,15 @@ i{
     font-family: 'Trebuchet MS';
     font-size: 20px;
 }
-img{
+.logo-pagina{
     position: absolute;
     top: 10%;
     left: 50%;
+    width: auto;
 }
-footer{
-    position: relative;
-    top:650px;
+.direitos{
+    position: absolute;
+    top:95%;
+    justify-content: center;
+    border-top: 2px red ridge ;
 }
