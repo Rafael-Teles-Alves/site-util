@@ -57,7 +57,7 @@ a{
 .descri{
     position: absolute;
     top: 70%;
-    left: 15%;
+    left: 10%;
     width: 90%;
 }
 .enima h1 {
@@ -120,7 +120,7 @@ a{
         animation: typing 5s steps(15) infinite; /* animação em si  junto com keyframe */
     }@keyframes typing{
         from { width: 0;  }
-        to { width: 55%; }
+        to { width: 60%; }
     }
 
 }
