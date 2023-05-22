@@ -4,7 +4,7 @@
     font-family: arial;
 }body{
     background: linear-gradient(to right, #33ccff 0%, #ff99cc 90%);
-    height: 1000px;
+    height: 100%;
     background-repeat: no-repeat;
 }
 .logo-canal img{
@@ -22,13 +22,15 @@
     padding: 25px;
 }.li-menu{
     display: inline-block;
-}a{
+}
+a{
     color: aliceblue;
     margin: 2px 15px 2px 15px;
     padding: 25px;
+    text-decoration: none;
 }a:hover{
-    color: #1ebbf0;
-    margin: 1px 20px 3px 10px;
+    color:#33ccff;
+    text-decoration: underline;
 }
 .capa{
     display: flex;
@@ -68,7 +70,6 @@
 }@keyframes typing{
     from { width: 0;  }
     to { width: 21%; }
-
 }
 .img-paginas img{
     position: absolute;
@@ -76,4 +77,28 @@
     left: 50%;
     width: 20%;
     border-radius: 50% ;
+}
+@media screen and (max-width: 760px){
+    .menu-index{
+        background-color:black;
+        width: 100%;
+    }.ul-menu{
+        text-align: center;
+        padding: 10px;
+    }.li-menu{
+        display: flex;
+        justify-content: center;
+    }a{
+        color: aliceblue;
+        text-align: center;
+        margin: 1px 0px 1px 5px;
+        padding: 5px;
+    }
+    .descri u{
+        display: flex;
+    }
+    .logo-canal img{
+        margin: 30px 0px 0px 10px;
+        
+    }
 }
