@@ -58,7 +58,7 @@ a{
     position: absolute;
     top: 70%;
     left: 15%;
-    width: 455px;
+    width: 90%;
 }
 .enima h1 {
     overflow: hidden; /*garantir que texto não fique visivel antes da hora*/
@@ -94,11 +94,33 @@ a{
         margin: 1px 0px 1px 5px;
         padding: 5px;
     }
-    .descri u{
-        display: flex;
-    }
     .logo-canal img{
-        margin: 30px 0px 0px 10px;
-        
+        margin: 30px 0px 0px 10px; 
     }
+    .sub-titulo{
+        position: absolute;
+        top: 62%;
+        left: 5%;
+    }.sub-titulo2{
+        position: absolute;
+        top: 66%;
+        left: 10%;
+        text-decoration: underline;
+        color: rgb(0, 26, 255);
+    }
+
+
+
+    .enima h1 {
+        overflow: hidden; /*garantir que texto não fique visivel antes da hora*/
+        border-right: .15em solid black; /* criar efeito de cursor */
+        white-space: nowrap;/* evitar de texto quebra em varias linhas */
+        margin: 5px auto;
+        letter-spacing:  .25em; /* dar espaço das letras */
+        animation: typing 5s steps(15) infinite; /* animação em si  junto com keyframe */
+    }@keyframes typing{
+        from { width: 0;  }
+        to { width: 55%; }
+    }
+
 }
