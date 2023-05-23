@@ -14,6 +14,7 @@
     height: auto;
     top:15px;
 }
+/*---------menu---------*/
 .menu-index{
     background-color:black;
     width: 100%;
@@ -32,6 +33,7 @@ a{
     color:#33ccff;
     text-decoration: underline;
 }
+/*---------menu---------*/
 .capa{
     display: flex;
 }
@@ -42,24 +44,46 @@ a{
 }span{
     color: red;
 }
-.sub-titulo{
-    position: absolute;
-    top: 60%;
-    left: 20%;
-    color: rgb(37, 36, 36);
-}.sub-titulo2{
-    position: absolute;
-    top: 63%;
-    left: 20%;
-    text-decoration: underline;
-    color: rgb(0, 26, 255);
+/*---------------formulario--------------------------*/
+.container {
+    max-width: 600px;
+    margin: 55px auto;
+    padding: 20px;
+    background-color: #f8f2f2c9;
+    border-radius: 10px;
+    box-shadow: 20px 20px 25px 0px rgb(8, 75, 43);
 }
-.descri{
-    position: absolute;
-    top: 70%;
-    left: 5%;
-    width: 90%;
+h1 {
+    text-align: center;
 }
+form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+}
+input, textarea {
+    padding: 10px;
+    border-radius: 10px 3px 10px 3px;
+    border: 1px solid #837a7ab2;
+    outline: none;
+}
+button {
+    padding: 10px 20px;
+    background-color: #219625be;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #468149;
+}
+/*---------------formulario--------------------------*/
 .enima h1 {
     overflow: hidden; /*garantir que texto não fique visivel antes da hora*/
     border-right: .15em solid black; /* criar efeito de cursor */
@@ -71,13 +95,7 @@ a{
     from { width: 0;  }
     to { width: 21%; }
 }
-.img-paginas img{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 20%;
-    border-radius: 50% ;
-}
+/*---------menu para celular-------------*/
 @media screen and (max-width: 720px){    
     .menu-index{
         background-color:black;
@@ -97,17 +115,6 @@ a{
     .logo-canal img{
         margin: 30px 0px 0px 10px; 
     }
-    .sub-titulo{
-        position: absolute;
-        top: 62%;
-        left: 5%;
-    }.sub-titulo2{
-        position: absolute;
-        top: 66%;
-        left: 10%;
-        text-decoration: underline;
-        color: rgb(0, 26, 255);
-    }
     .enima h1 {
         overflow: hidden; /*garantir que texto não fique visivel antes da hora*/
         border-right: .15em solid black; /* criar efeito de cursor */
@@ -119,5 +126,5 @@ a{
         from { width: 0;  }
         to { width: 60%; }
     }
-
 }
+/*---------menu para celular-------------*/
