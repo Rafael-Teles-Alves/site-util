@@ -69,7 +69,7 @@ a{
     animation: typing 5s steps(15) infinite; /* animação em si  junto com keyframe */
 }@keyframes typing{
     from { width: 0;  }
-    to { width: 21%; }
+    to { width: 300px; }
 }
 .img-paginas img{
     position: absolute;
@@ -117,7 +117,7 @@ a{
         animation: typing 5s steps(15) infinite; /* animação em si  junto com keyframe */
     }@keyframes typing{
         from { width: 0;  }
-        to { width: 60%; }
+        to { width: 300px; }
     }
 
 }
