@@ -71,20 +71,24 @@ input, textarea {
     border-radius: 10px 3px 10px 3px;
     border: 1px solid #837a7ab2;
     outline: none;
+}input:focus {
+    background-color: #ebf8ebb9;  
+}
+textarea:focus{
+    background-color: #ebf8ebb9;  
 }
 button {
     padding: 10px 20px;
-    background-color: #219625be;
+    background-color: #219625d8;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }       
 button:hover {
-    background-color: #468149;
-}button, input:focus {
-    background-color: #dbdddb;
-    border-radius: 5px;
+    background-color: #227e22;
+}button:focus {
+    background-color: #227e22;  
 }
 /*---------------formulario--------------------------*/
 /*---------menu para celular-------------*/
@@ -107,5 +111,5 @@ button:hover {
     .logo-canal img{
         margin: 30px 0px 0px 10px; 
     }
-
+}
 /*---------menu para celular-------------*/
