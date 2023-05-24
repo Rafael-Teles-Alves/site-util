@@ -127,7 +127,7 @@ button:hover {
         animation: typing 5s steps(15) infinite; /* animação em si  junto com keyframe */
     }@keyframes typing{
         from { width: 0;  }
-        to { width: 300px; }
+        to { width: 350px; }
     }
 }
 /*---------menu para celular-------------*/
