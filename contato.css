@@ -79,9 +79,12 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+}       
 button:hover {
     background-color: #468149;
+}button, input:focus {
+    background-color: #dbdddb;
+    border-radius: 5px;
 }
 /*---------------formulario--------------------------*/
 .enima h1 {
@@ -93,7 +96,7 @@ button:hover {
     animation: typing 5s steps(15) infinite; /* animação em si  junto com keyframe */
 }@keyframes typing{
     from { width: 0;  }
-    to { width: 21%; }
+    to { width: 300px; }
 }
 /*---------menu para celular-------------*/
 @media screen and (max-width: 720px){    
@@ -124,7 +127,7 @@ button:hover {
         animation: typing 5s steps(15) infinite; /* animação em si  junto com keyframe */
     }@keyframes typing{
         from { width: 0;  }
-        to { width: 60%; }
+        to { width: 300px; }
     }
 }
 /*---------menu para celular-------------*/
