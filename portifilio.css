@@ -148,11 +148,22 @@ a{
     width: 70px;
     height: 55px;
     position: absolute;   
-    top: 307px;
+    top: 230px;
     left: 480px;
     animation: quadrado 1s infinite linear;
     background-color: rgb(255, 255, 255); 
-}@keyframes quadrado{
+}@media screen and (max-width: 720px){
+    #quadrado{
+        width: 70px;
+        height: 55px;
+        position: absolute;   
+        top: 307px;
+        left: 480px;
+        animation: quadrado 1s infinite linear;
+        background-color: rgb(255, 255, 255); 
+    }
+}
+@keyframes quadrado{
     0%{left: 350px;}
     100%{left: -100px;}
 }
