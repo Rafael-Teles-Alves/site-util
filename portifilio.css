@@ -142,7 +142,7 @@ a{
     100%{top: 120px;}
 }
 .animar{
-    animation: personagem 500ms infinite;
+    animation: personagem 550ms infinite;
 }
 #quadrado{
     width: 70px;
