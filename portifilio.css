@@ -30,6 +30,7 @@
     color: #1ebbf0;
     margin: 1px 20px 3px 10px;
 }
+
 /*------menu------*/
 
 #game{
@@ -57,7 +58,7 @@
     width: 70px;
     height: 50px;
     position: absolute;   
-    top: 151px;
+    top: 273px;
     left: 480px;
     animation: quadrado 1s infinite linear;
     background-color: rgb(255, 255, 255); 
