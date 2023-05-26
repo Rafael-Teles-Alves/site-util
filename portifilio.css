@@ -119,13 +119,12 @@ a{
         from { width: 0;  }
         to { width: 300px; }
     }
-
 }
 
 /*------menu------*/
 
 #game{
-    width: 100%;
+    width: 400px;
     height: 200px;
     border: 1px solid black;
     background-color: rgb(255, 255, 255);
@@ -138,22 +137,22 @@ a{
     background-color: rgb(255, 255, 255);
 }@keyframes personagem{
     0%{top: 120px;}
-    30%{top: 60px;}
-    70%{top: 60px;}
+    30%{top: 50px;}
+    70%{top: 40px;}
     100%{top: 120px;}
 }
 .animar{
-    animation: personagem 550ms infinite;
+    animation: personagem 500ms infinite;
 }
 #quadrado{
     width: 70px;
-    height: 50px;
+    height: 55px;
     position: absolute;   
-    top: 309px;
+    top: 307px;
     left: 480px;
     animation: quadrado 1s infinite linear;
     background-color: rgb(255, 255, 255); 
 }@keyframes quadrado{
-    0%{left: 100%;}
-    100%{left: -40px;}
+    0%{left: 350px;}
+    100%{left: -100px;}
 }
