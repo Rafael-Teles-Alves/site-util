@@ -134,30 +134,4 @@ a{
     }
     
 
-
-}
-.nome {
-    position: absolute;
-    top: 255px;
-    left: 15px;
-    width: 300px;
-}
-.descri1{
-    position: relative;
-    top: 15px;
-    padding: 5px;
-}
-.descri{
-    position: relative;
-    top: 15px;
-}
-.incon-linguagem{
-    display: flex;
-    justify-content: flex-start;
-}
-img{
-    position: absolute;
-    width: 55px;
-    top: 155px;
-    left: 5px;
 }

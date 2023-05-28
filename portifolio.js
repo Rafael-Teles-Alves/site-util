@@ -15,7 +15,7 @@ var testarColisao = setInterval( function(){
     var EsquerdaQuadrado = parseInt(
         window.getComputedStyle(quadrado).getPropertyValue('left')
        )
-       if(EsquerdaQuadrado < 90 && EsquerdaQuadrado > 0 && topoPersonagem >= 70){
+       if(EsquerdaQuadrado < 90 /*distancia*/  && EsquerdaQuadrado > 0 && topoPersonagem >= 60){
         quadrado.style.animation = 'none'
         quadrado.style.display = 'none'
         alert('Você perdeu!')
