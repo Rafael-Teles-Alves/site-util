@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br" onclick="pular()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portifilio.css">
+    <title>Portifolio</title>
+</head>
+<body>
+    <header>
+        <nav class="menu-index">
+            <div class="logo-canal">
+                <a href="https://www.youtube.com/channel/UCSLmuUhHzBFmWV4-o44bY_Q">
+                    <img src="https://yt3.googleusercontent.com/UekOmukRyKMoHiTZUCeTQ5elLhxBS1jtk0-fPWchfi3VuLckiLypa4s8B9lqhiOf-jRPskoG4vs=s176-c-k-c0x00ffffff-no-rj" alt="Descrição da imagem">
+                  </a>
+            </div>
+            <ul class="ul-menu">
+                <li class="li-menu"><a href="index.html" >INICIO</a></li>
+                <li class="li-menu"><a href="sobre.html" >SOBRE</a></li>
+                <li class="li-menu"><a href="portifolio.html" >PORTIFÓLIO</a></li>
+                <li class="li-menu"><a href="contato.html" >CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="jogo-mario" >
+            <div id="game">
+                <img src="mario.gif" id="personagem" alt="personagem  mario">
+                <img src="pipe.png" id="quadrado" alt="tubo do mario">
+            </div>
+        </div>
+    <script>
+            // Coloque aqui o código para iniciar o jogo
+            
+            // jogo daqui para baixo 
+            let personagem = document.querySelector('#personagem')
+            let quadrado = document.querySelector('#quadrado')
+            function pular(){
+                if(personagem.classList != 'animar'){
+                    personagem.classList.add('animar')
+                }
+                setTimeout(function(){
+                    personagem.classList.remove('animar')
+                }, 500)
+            }
+                var testarColisao = setInterval( function(){
+                var topoPersonagem = parseInt(
+                window.getComputedStyle(personagem).getPropertyValue('top')
+                )
+                var EsquerdaQuadrado = parseInt(
+                    window.getComputedStyle(quadrado).getPropertyValue('left')
+                )
+                if(EsquerdaQuadrado < 90 /*distancia*/  && EsquerdaQuadrado > 0 && topoPersonagem >= 60){
+                    quadrado.style.animation = 'none'
+                    quadrado.style.display = 'none'
+                    alert('Você perdeu!')
+                }
+            }, 10)
+    </script>
+    </main>
+</body>
+</html>

@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br" onclick="pular()">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portifilio.css">
     <title>Portifolio</title>
+    <style>
+        .titulo{
+            display: flex;
+            justify-content: center;
+            padding: 35px;
+        }
+        .bnt-jogo-inicia{
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 2%;
+            box-shadow: 25px 10px 25px 10px rgba(49, 48, 48, 0.705);
+            display: flex;
+            margin: 10px 5px 25px 30px;
+            height: 250px;
+            width: 15%;
+        }
+        .img-mario-capa{
+            width: 100%;
+            height: 200px;
+        }
+        .bnt-iniciar-mario{
+            position: absolute;
+            top: 400px;
+            color: black;
+        }.bnt-iniciar-mario:hover ,:focus{
+            color: blue;
+        }
+        .bnt-iniciar-tiro{
+            position: absolute;
+            top: 680px;
+            color: black;
+        }.bnt-iniciar-tiro:hover{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,12 +58,15 @@
         </nav>
     </header>
     <main>
-        <div id="game">
-            <img src="mario.gif" id="personagem" alt="personagem  mario">
-            <img src="pipe.png" id="quadrado" alt="tubo do mario">
+        <h1 class="titulo"> Veja Alguns Jogos Criados em JaveScript.</h1>
+        <div class="bnt-jogo-inicia">
+            <img class="img-mario-capa" src="mario no cano.jpg" alt="foto do mario bros">
+            <a class="bnt-iniciar-mario" href="jogo_mario.html">Iniciar Jogo Mario</a>
         </div>
-    <script src="portifolio.js"></script>
+        <div class="bnt-jogo-inicia">
+            <img class="img-mario-capa" src="images.jpeg" alt="jogo de nav">
+            <a class="bnt-iniciar-tiro"  href="jogo_tiro.html">Iniciar Jogo Tiro</a>
+        </div>    
     </main>
-
 </body>
 </html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="portifilio.css">
+    <title>Jogo de Tiro</title>
+</head>
+<body>
+    <header>
+        <nav class="menu-index">
+            <div class="logo-canal">
+                <a href="https://www.youtube.com/channel/UCSLmuUhHzBFmWV4-o44bY_Q">
+                    <img src="https://yt3.googleusercontent.com/UekOmukRyKMoHiTZUCeTQ5elLhxBS1jtk0-fPWchfi3VuLckiLypa4s8B9lqhiOf-jRPskoG4vs=s176-c-k-c0x00ffffff-no-rj" alt="Descrição da imagem">
+                  </a>
+            </div>
+            <ul class="ul-menu">
+                <li class="li-menu"><a href="index.html" >INICIO</a></li>
+                <li class="li-menu"><a href="sobre.html" >SOBRE</a></li>
+                <li class="li-menu"><a href="portifolio.html" >PORTIFÓLIO</a></li>
+                <li class="li-menu"><a href="contato.html" >CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <canvas id="gameCanvas" width="500" height="600"></canvas>
+
+    <script>
+        // Inicialização
+        var canvas = document.getElementById("gameCanvas");
+        var context = canvas.getContext("2d");
+
+        // Variáveis do personagem
+        var character = {
+            x: canvas.width / 2,
+            y: canvas.height - 30,
+            width: 20,
+            height: 30,
+            color: "blue",
+            moveSpeed: 35
+        };
+        // Variáveis dos projéteis
+        var projectiles = [];
+        var projectileRadius = 5;
+        var projectileSpeed = 5;
+        var projectileColor = "red";
+        // Variáveis dos inimigos
+        var enemies = [];
+        var enemySize = 20;
+        var enemySpeed = 2;
+        var enemyColor = "green";
+        // Variável de pontuação
+        var score = 0;
+        // Controle do personagem
+        document.addEventListener("keydown", function (event) {
+            if (event.keyCode === 37) { // Tecla da seta esquerda
+                character.x -= character.moveSpeed;
+            } else if (event.keyCode === 39) { // Tecla da seta direita
+                character.x += character.moveSpeed;
+            } else if (event.keyCode === 32) { // Tecla espaço para atirar
+                shootProjectile();
+            }
+        });
+        // Função para atirar um projétil
+        function shootProjectile() {
+            var projectile = {
+                x: character.x + character.width / 2,
+                y: character.y,
+                radius: projectileRadius,
+                color: projectileColor,
+                dy: -projectileSpeed
+            };
+            projectiles.push(projectile);
+        }
+        // Função para criar inimigos aleatórios
+        function createEnemy() {
+            var enemy = {
+                x: Math.random() * (canvas.width - enemySize),
+                y: 0,
+                width: enemySize,
+                height: enemySize,
+                color: enemyColor,
+                dy: enemySpeed
+            };
+            enemies.push(enemy);
+        }
+        // Função para desenhar o personagem
+        function drawCharacter() {
+            context.fillStyle = character.color;
+            context.fillRect(character.x, character.y, character.width, character.height);
+        }
+        // Função para desenhar os projéteis
+        function drawProjectiles() {
+            for (var i = 0; i < projectiles.length; i++) {
+                var projectile = projectiles[i];
+                context.beginPath();
+                context.arc(projectile.x, projectile.y, projectile.radius, 0, Math.PI * 2);
+                context.fillStyle = projectile.color;
+                context.fill();
+                context.closePath();
+            }
+        }
+        // Função para desenhar os inimigos
+        function drawEnemies() {
+            for (var i = 0; i < enemies.length; i++) {
+                var enemy = enemies[i];
+                context.fillStyle = enemy.color;
+                context.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+            }
+        }
+        // Função para atualizar os projéteis
+        function updateProjectiles() {
+            for (var i = 0; i < projectiles.length; i++) {
+                var projectile = projectiles[i];
+                projectile.y += projectile.dy;
+                // Verificar colisão do projétil com os inimigos
+                for (var j = 0; j < enemies.length; j++) {
+                    var enemy = enemies[j];
+                    if (
+                        projectile.x > enemy.x &&
+                        projectile.x < enemy.x + enemy.width &&
+                        projectile.y > enemy.y &&
+                        projectile.y < enemy.y + enemy.height
+                    ) {
+                        projectiles.splice(i, 1);
+                        enemies.splice(j, 1);
+                        score += 10; // Incrementar a pontuação
+                        break;
+                    }
+                }
+                // Verificar se o projétil saiu da tela
+                if (projectile.y < 0) {
+                    projectiles.splice(i, 1);
+                }
+            }
+        }
+        // Função para atualizar os inimigos
+        function updateEnemies() {
+            for (var i = 0; i < enemies.length; i++) {
+                var enemy = enemies[i];
+                enemy.y += enemy.dy;
+                // Verificar colisão do inimigo com o personagem
+                if (
+                    character.x < enemy.x + enemy.width &&
+                    character.x + character.width > enemy.x &&
+                    character.y < enemy.y + enemy.height &&
+                    character.y + character.height > enemy.y
+                ) {
+                    // Colisão com o personagem - fim do jogo
+                    location.reload();
+                }
+                // Verificar se o inimigo saiu da tela
+                if (enemy.y > canvas.height) {
+                    enemies.splice(i, 1);
+                }
+            }
+        }
+        // Função para exibir a pontuação na tela
+        function drawScore() {
+            context.font = "20px Arial";
+            context.fillStyle = "black";
+            context.fillText("Pontuação: " + score, 10, 30);
+        }
+        // Função principal do jogo
+        function gameLoop() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawCharacter();
+            drawProjectiles();
+            drawEnemies();
+            drawScore(); // Desenhar a pontuação
+            updateProjectiles();
+            updateEnemies();
+            requestAnimationFrame(gameLoop);
+        }
+        // Loop para criar inimigos a cada segundo
+        setInterval(createEnemy, 1000);
+        // Iniciar o loop do jogo
+        gameLoop();
+    </script>
+</body>
+</html>
