@@ -74,7 +74,11 @@ input, textarea {
 }input:focus {
     background-color: #ebf8ebb9;  
 }
-textarea:focus{
+#message{
+    width: 250px;
+    min-height: 10px;
+    resize: vertical;
+}textarea:focus{
     background-color: #ebf8ebb9;  
 }
 button {
