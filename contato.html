@@ -15,7 +15,7 @@
             <div class="logo-canal">
                 <a href="https://www.youtube.com/channel/UCSLmuUhHzBFmWV4-o44bY_Q">
                     <img src="https://yt3.googleusercontent.com/UekOmukRyKMoHiTZUCeTQ5elLhxBS1jtk0-fPWchfi3VuLckiLypa4s8B9lqhiOf-jRPskoG4vs=s176-c-k-c0x00ffffff-no-rj" alt="Descrição da imagem">
-                  </a>
+                </a>
             </div>
             <ul class="ul-menu">
                 <li class="li-menu"><a href="index.html" >INICIO</a></li>
@@ -27,7 +27,7 @@
     </header>
     <div class="container">
         <h1>Contato</h1>
-        <form >
+        <form>
           <div class="form-group">
             <label for="name">Nome:</label>
             <input type="text" id="nome" name="nome" required>
@@ -47,5 +47,41 @@
           <button type="submit">Enviar</button>
         </form>
       </div>
+      <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+          event.preventDefault();
+      
+          const nome = document.getElementById('nome').value;
+          const email = document.getElementById('email').value;
+          const telefone = document.getElementById('telefone').value;
+          const mensagem = document.getElementById('mensagem').value;
+      
+          const formData = {
+            nome,
+            email,
+            telefone,
+            mensagem
+          };
+      
+          fetch('http://localhost:3000/enviar-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          })
+            .then((response) => {
+              if (response.ok) {
+                alert('Mensagem enviada com sucesso');
+                document.querySelector('form').reset();
+              } else {
+                alert('Erro ao enviar a mensagem');
+              }
+            })
+            .catch((error) => {
+              console.error('Erro ao enviar a mensagem:', error);
+            });
+        });
+      </script>
 </body>
 </html>
