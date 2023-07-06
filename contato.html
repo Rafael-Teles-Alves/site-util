@@ -16,7 +16,7 @@
             <div class="logo-canal">
                 <a href="https://www.youtube.com/channel/UCSLmuUhHzBFmWV4-o44bY_Q">
                     <img src="https://yt3.googleusercontent.com/UekOmukRyKMoHiTZUCeTQ5elLhxBS1jtk0-fPWchfi3VuLckiLypa4s8B9lqhiOf-jRPskoG4vs=s176-c-k-c0x00ffffff-no-rj" alt="Descrição da imagem">
-                  </a>
+                </a>
             </div>
             <ul class="ul-menu">
                 <li class="li-menu"><a href="index.html" >INICIO</a></li>
@@ -31,7 +31,7 @@
         <form method="post" id="fContato" action="mailto:rafael_tsalves@hotmail.com" oninput="calc_total();">
           <div class="form-group">
             <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="nome" name="nome" required>
           </div>
           <div class="form-group">
             <label for="email">Email:</label>
@@ -43,10 +43,46 @@
           </div>
           <div class="form-group">
             <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required maxlength="650px"></textarea>
+            <textarea id="mensagem" name="mensagem" required maxlength="650px"></textarea>
           </div>
           <button type="submit">Enviar</button>
         </form>
       </div>
+      <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+          event.preventDefault();
+      
+          const nome = document.getElementById('nome').value;
+          const email = document.getElementById('email').value;
+          const telefone = document.getElementById('telefone').value;
+          const mensagem = document.getElementById('mensagem').value;
+      
+          const formData = {
+            nome,
+            email,
+            telefone,
+            mensagem
+          };
+      
+          fetch('http://localhost:3000/enviar-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          })
+            .then((response) => {
+              if (response.ok) {
+                alert('Mensagem enviada com sucesso');
+                document.querySelector('form').reset();
+              } else {
+                alert('Erro ao enviar a mensagem');
+              }
+            })
+            .catch((error) => {
+              console.error('Erro ao enviar a mensagem:', error);
+            });
+        });
+      </script>
 </body>
 </html>
