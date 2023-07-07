@@ -51,7 +51,7 @@ label #ltitulo {
   padding-top: 5px;
   
 }
-#btn-copia {
+.btn-copia {
   display: flex;
   justify-content: center;
   margin-top: 15px;
