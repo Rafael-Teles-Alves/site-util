@@ -1,9 +1,10 @@
 // javascript para remover coisas//
 function removerCaracteres() {
     var inputText = document.getElementById("input-text").value;
+    document.getElementById("alert-text").innerHTML = ""
 
         // Utilizando expressão regular para substituir os caracteres desejados
-    var outputText = inputText.replace(/[* ,.,\/]/g,'');
+    var outputText = inputText.replace(/[+* ,.,\/]/g,'');
 
     document.getElementById("output-text").textContent = outputText;
     }
@@ -24,6 +25,6 @@ window.addEventListener('DOMContentLoaded', function() {
         document.execCommand('copy');
 
         document.getElementById("alert-text").innerHTML = "Pronto Copiado"
-        
+
     });
     });
