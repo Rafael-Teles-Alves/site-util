@@ -1,0 +1,50 @@
+#conteiner {  
+  flex-direction: column;
+}
+#conteiner #input-text {
+  margin-top: 50px;
+  border-radius: 3px;
+  border: 1px solid red;
+  width: 300px;
+}
+#con-bnt {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+#conteiner #bnt{
+  color: rgb(0, 0, 0);
+  background-color: rgb(187, 197, 197);
+  border-radius: 5px;
+  padding: 10px;
+}
+#conteiner #bnt:hover{
+  color: rgb(248, 245, 245);
+  background-color: rgb(67, 70, 70);
+
+}
+label{
+  display: flex;
+  justify-content: center;
+}
+label #ltitulo {
+  color: rgb(33, 34, 34);
+  margin-top: 20px;
+  font-family: Arial;
+  font-size: 25px;
+}
+#input-text {
+  text-align: center;
+  height: 40px;
+  
+}
+#inp-do-text {
+  display: flex;
+  color: blueviolet;
+  justify-content: center;
+
+}
+#output-text{
+  text-align: center;
+  padding-top: 5px;
+}

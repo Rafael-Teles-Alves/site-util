@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="corpo-serviços.css">
     <link rel="stylesheet" href="Serviços.css">
     <link rel="icon" href="https://yt3.googleusercontent.com/UekOmukRyKMoHiTZUCeTQ5elLhxBS1jtk0-fPWchfi3VuLckiLypa4s8B9lqhiOf-jRPskoG4vs=s176-c-k-c0x00ffffff-no-rj" type="image/x-icon">
     <title>SERVIÇOS</title>
@@ -26,10 +26,17 @@
         </nav>
     </header>
 <div id="conteiner">
-    <textarea id="input-text" placeholder="Digite o texto aqui"></textarea>
-    <button id="bnt" onclick="removerCaracteres()">Remover</button>
+    <label>
+        <h4 id="ltitulo">.::Digite uma numeração com pontos e traços a<br> serem removidos (CNPJ,CPF,NF-E,CT-E ...)::.</h4><br>
+    </label>
+    <div id="inp-do-text">
+        <input id="input-text" placeholder="Digite o texto aqui"/>
+    </div>
+    <div id="con-bnt">
+        <button id="bnt" onclick="removerCaracteres()">Remover</button>
+    </div>
     <div id="output-text"></div>
-  
+</div>
     <script>
         function removerCaracteres() {
         var inputText = document.getElementById("input-text").value;
@@ -41,7 +48,7 @@
         }
 
     </script>
-</div>
+
 
 </body>
 </html>
