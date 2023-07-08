@@ -9,8 +9,7 @@
   margin-top: 50px;
   border-radius: 3px;
   border: 1px solid red;
-  width: 80%;
-  max-width: 300px;
+  width: 100%;
 }
 
 #con-bnt {
@@ -50,12 +49,14 @@ label #ltitulo {
 #input-text {
   text-align: center;
   height: 40px;
+  width: 80%;
 }
 
 #inp-do-text {
   display: flex;
   color: blueviolet;
   justify-content: center;
+  width: 80%;
 }
 
 #output-text {
