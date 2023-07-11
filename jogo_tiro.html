@@ -3,6 +3,17 @@
 <head>
     <link rel="stylesheet" href="portifilio.css">
     <title>Jogo de Tiro</title>
+    <style>
+        #conteiner-j {
+            display: flex;
+            justify-content: center;
+            margin: 40px;
+        }
+        #gameCanvas {
+            border: 2px solid red;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,14 +25,15 @@
             </div>
             <ul class="ul-menu">
                 <li class="li-menu"><a href="index.html" >INICIO</a></li>
-                <li class="li-menu"><a href="sobre.html" >SOBRE</a></li>
+                <li class="li-menu"><a href="Serviços.html" >SERVIÇOS</a></li>
                 <li class="li-menu"><a href="portifolio.html" >PORTIFÓLIO</a></li>
                 <li class="li-menu"><a href="contato.html" >CONTATO</a></li>
             </ul>
         </nav>
     </header>
-    <canvas id="gameCanvas" width="500" height="600"></canvas>
-
+    <div id="conteiner-j">
+        <canvas id="gameCanvas" width="500" height="600" ></canvas>
+    </div>
     <script>
         // Inicialização
         var canvas = document.getElementById("gameCanvas");
@@ -30,21 +42,21 @@
         // Variáveis do personagem
         var character = {
             x: canvas.width / 2,
-            y: canvas.height - 30,
-            width: 20,
+            y: canvas.height - 15,
+            width: 30,
             height: 30,
             color: "blue",
-            moveSpeed: 15
+            moveSpeed: 22
         };
         // Variáveis dos projéteis
         var projectiles = [];
-        var projectileRadius = 5;
-        var projectileSpeed = 5;
+        var projectileRadius = 8;
+        var projectileSpeed = 7;
         var projectileColor = "red";
         // Variáveis dos inimigos
         var enemies = [];
-        var enemySize = 20;
-        var enemySpeed = 2;
+        var enemySize = 25;
+        var enemySpeed = 1.5;
         var enemyColor = "green";
         // Variável de pontuação
         var score = 0;
