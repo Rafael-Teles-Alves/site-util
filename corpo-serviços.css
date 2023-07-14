@@ -4,20 +4,17 @@
   align-items: center;
   padding: 20px;
 }
-
 #conteiner #input-text {
   margin-top: 50px;
   border-radius: 3px;
   border: 1px solid red;
   width: 100%;
 }
-
 #con-bnt {
   display: flex;
   justify-content: center;
   padding: 15px;
 }
-
 #conteiner #bnt {
   color: rgb(0, 0, 0);
   background-color: rgb(187, 197, 197);
@@ -26,50 +23,42 @@
   width: 120px;
   text-align: center;
 }
-
 #conteiner #bnt:hover {
   color: rgb(231, 231, 231);
   background-color: rgba(97, 96, 95, 0.815);
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px black;
 }
-
 label {
   display: flex;
   justify-content: center;
 }
-
 label #ltitulo {
   color: rgb(33, 34, 34);
   margin-top: 20px;
   font-family: Arial;
   font-size: 25px;
 }
-
 #input-text {
   text-align: center;
   height: 40px;
   width: 80%;
 }
-
 #inp-do-text {
   display: flex;
   color: blueviolet;
   justify-content: center;
   width: 80%;
 }
-
 #output-text {
   text-align: center;
   padding-top: 5px;
 }
-
 .btn-copia {
   display: flex;
   justify-content: center;
   margin-top: 15px;
 }
-
 .copy-button {
   color: rgb(0, 0, 0);
   background-color: rgb(187, 197, 197);
@@ -77,7 +66,6 @@ label #ltitulo {
   width: 100px;
   border-radius: 5px;
 }
-
 .copy-button:hover {
   color: rgb(231, 231, 231);
   background-color: rgba(97, 96, 95, 0.815);
