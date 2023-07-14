@@ -78,6 +78,48 @@ a{
     width: 20%;
     border-radius: 50% ;
 }
+.btn-copia {
+}
+#divisa {
+    margin: 3px;
+    border-top: 2px solid rgba(78, 77, 77, 0.425);
+    padding: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+#titulo-test{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 25px;
+    color: #000000;
+    box-shadow: 1px 1px 25px black;
+    background-color: #2a8bac2a;
+}
+#corp-tes {
+    border: 1px solid rgba(255, 0, 0, 0.158);
+    margin: 5px;
+    box-shadow: 1px 2px 20px black;
+    border-radius: 5px;
+}
+#div-bnt {
+    padding: 10px;
+}
+#bnt-test {
+    border: 1px solid rgba(255, 0, 0, 0.267);
+    border-radius: 5px;
+    color: #000000;
+    background-color: #b1afaf69;
+    padding: 5px;
+}#bnt-test:hover {
+    background-color: #302f2f;
+    color: aliceblue;
+    background: linear-gradient(to bottom, #c9b8b8, #2e2e36); /* Cores de exemplo */
+}
+#desc-test {
+    font-size: 9px;
+    margin: 7px;
+}
+
 @media screen and (max-width: 720px){    
     .menu-index{
         background-color:black;
