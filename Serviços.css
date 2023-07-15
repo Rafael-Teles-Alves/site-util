@@ -78,14 +78,15 @@ a{
     width: 20%;
     border-radius: 50% ;
 }
-.btn-copia {
+#margin {
+    padding: 10px;
 }
 #divisa {
     margin: 3px;
     border-top: 2px solid rgba(78, 77, 77, 0.425);
     padding: 20px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 86px;
 }
 #titulo-test{
     font-size: 25px;
