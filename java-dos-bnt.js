@@ -4,7 +4,7 @@ function removerCaracteres() {
     document.getElementById("alert-text").innerHTML = ""
 
         // Utilizando expressão regular para substituir os caracteres desejados
-    var outputText = inputText.replace(/[-+* ,.,\/]/g,'');
+    var outputText = inputText.replace(/[-+*:;,.,\/]/g,'');
 
     document.getElementById("output-text").textContent = outputText;
     }
