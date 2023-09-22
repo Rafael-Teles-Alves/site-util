@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin: 80px 40px;
+    background-color: #0077cca4;
+}
+.tool {
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.479);
+    width: 70%;
+    margin: 5px auto 35px;
+}
+.tool h2 {
+    font-size: 30px;
+    padding: 30px;
+}
+.tool p {
+    font-size: 20px;
+    padding: 5px;
+}
+.tool a {
+    color: #2a90e4;
+}
+.tool a:hover {
+    color: #222225c5;
+}
+footer {
+    margin: 10%;
+}
