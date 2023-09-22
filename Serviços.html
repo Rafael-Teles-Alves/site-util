@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="corpo-serviços.css">
+    <link rel="stylesheet" href="ferramentas-style.css">
     <link rel="stylesheet" href="Serviços.css">
     <link rel="icon" href="https://yt3.googleusercontent.com/UekOmukRyKMoHiTZUCeTQ5elLhxBS1jtk0-fPWchfi3VuLckiLypa4s8B9lqhiOf-jRPskoG4vs=s176-c-k-c0x00ffffff-no-rj" type="image/x-icon">
     <title>SERVIÇOS</title>
@@ -28,40 +29,91 @@
         </nav>
     </header>
     <!--inivio remover-->
-<div id="conteiner">
-    <!--lebel titulo-->
-    <label>
-        <h4 id="ltitulo">.::Digite uma numeração com pontos e traços a<br> serem removidos (CNPJ,CPF,NF-E,CT-E ...)::.</h4><br>
-    </label>
-    <!--captura do texto-->
-    <div id="inp-do-text">
-        <input id="input-text" placeholder="Digite o texto aqui"/>
-    </div>
-    <!--botão de remover-->
-    <div id="con-bnt">
-        <button id="bnt" onclick="removerCaracteres()">Remover</button>
-    </div>
-    <!--add texto já pronto removidos pontos-->
-    <div id="output-text"></div>
-    <!--botão de copiar-->
-    <div class="btn-copia">
-        <button class="copy-button" onclick="copiando()">Copiar</button>
-    </div>
-    <div id="margin"></div>
-    <!--alerta que foi copiado-->
-    <div class="btn-copia" id="alert-text"></div>
-
-    <!--teste de internet-->
-    <header id="divisa">
-        <h3 id="titulo-test">Teste Sua Internet</h3>
-        <div id="div-bnt">
-            <a type="button" href="https://fast.com/pt/" id="bnt-test">Ir Para Teste</a>
-            <p id="desc-test">Fast.com</p>
+    <div id="conteiner">
+        <!--lebel titulo-->
+        <label>
+            <h4 id="ltitulo">.:Todos Os Caracteres Serão Removidos::.</h4><br>
+        </label>
+        <!--captura do texto-->
+        <div id="inp-do-text">
+            <input id="input-text" placeholder="Digite (CNPJ,CPF,NF-E,CT-E ...)"/>
         </div>
-    </header>
+        <!--botão de remover-->
+        <div id="con-bnt">
+            <button id="bnt" onclick="removerCaracteres()">Remover</button>
+        </div>
+        <!--add texto já pronto removidos pontos-->
+        <div id="output-text"></div>
+        <!--botão de copiar-->
+        <div class="btn-copia">
+            <button class="copy-button" onclick="copiando()">Copiar</button>
+        </div>
+        <div id="margin"></div>
+        <!--alerta que foi copiado-->
+        <div class="btn-copia" id="alert-text"></div>
 
-</div>
+        <!--teste de internet-->
+        <header id="divisa">
+            <h3 id="titulo-test">Teste Sua Internet</h3>
+            <div id="div-bnt">
+                <a type="button" href="https://fast.com/pt/" id="bnt-test">Ir Para Teste</a>
+                <p id="desc-test">Fast.com</p>
+            </div>
+        </header>
+        <!--começo do links para ferramentas-->
+        <header>
+            <h1>Ferramentas Úteis</h1>
+        </header>
+        <main>
+            <div class="tool">
+                <h2><a href="https://www.ccleaner.com/">CCleaner</a></h2>
+                <p>Ferramenta de limpeza de sistema e otimização.</p>
+            </div>
+
+            <div class="tool">
+                <h2><a href="https://www.malwarebytes.com/">Malwarebytes</a></h2>
+                <p>Anti-Virus.</p>
+            </div>
+
+            <div class="tool">
+                <h2><a href="https://www.teamviewer.com/">TeamViewer</a></h2>
+                <p>Ferramenta de acesso remoto e suporte.</p>
+            </div>
+
+            <div class="tool">
+                <h2><a href="https://anydesk.com/">AnyDesk </a></h2>
+                <p> Outra ferramenta de acesso remoto.</p>
+            </div>
+
+            <div class="tool">
+                <h2><a href="https://drive.google.com/">Google Drive </a></h2>
+                <p>Serviço de armazenamento em nuvem do Google.</p>
+            </div>
+
+            <div class="tool">
+                <h2><a href="https://ninite.com/">Ninite </a></h2>
+                <p>Ferramenta para baixar e instalar várias aplicações de uma só vez.</p>
+            </div>
+
+            <div class="tool">
+                <h2><a href="https://crystalmark.info/en/software/crystaldiskinfo/">CrystalDiskInfo</a></h2>
+                <p>Monitora a saúde do disco rígido.</p>
+            </div>
+
+            <div class="tool">
+                <h2><a href="https://www.qr-code-monkey.com/">QR Code Monkey </a></h2>
+                <p>Oferece a criação de QR codes com opções avançadas de personalização e rastreamento.</p>
+            </div>
+
+            <div class="tool">
+                <h2><a href="https://barcode.tec-it.com/en/Code128?data=ABC-abc-1234">Codigo De Barras</a></h2>
+                <p>Uma ferramenta online para gerar códigos de barras em diversos formatos, como EAN, UPC, QR e outros.</p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 Rafael Teles</p>
+        </footer>
+    </div>
     <script src="java-dos-bnt.js"></script>
-
 </body>
 </html>
